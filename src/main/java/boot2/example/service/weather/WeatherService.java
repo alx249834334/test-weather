@@ -2,7 +2,7 @@ package boot2.example.service.weather;
 
 import boot2.example.AppProperties;
 import boot2.example.dto.weather.WeatherForecastDto;
-import boot2.example.kafka.IKafkaMessageProducer;
+//import boot2.example.kafka.IKafkaMessageProducer;
 import boot2.example.mapper.customer.CustomerMapperImpl;
 import boot2.example.model.customer.Customer;
 import boot2.example.provider.IDataProvider;
@@ -26,23 +26,22 @@ public class WeatherService implements IWeatherService {
 
     private final ICustomerService customerService;
 
-    private final IKafkaMessageProducer kafkaMessageProducer;
+    //private final IKafkaMessageProducer kafkaMessageProducer;
 
     /**
      * Instantiates a new Weather service.
      *
-     * @param appProperties        the app properties
-     * @param weatherProvider      the weather provider
-     * @param customerService      the customer service
-     * @param kafkaMessageProducer the kafka message producer
+     * @param appProperties   the app properties
+     * @param weatherProvider the weather provider
+     * @param customerService the customer service
      */
     public WeatherService(AppProperties appProperties,
                           IDataProvider weatherProvider,
-                          ICustomerService customerService, IKafkaMessageProducer kafkaMessageProducer) {
+                          ICustomerService customerService/*, IKafkaMessageProducer kafkaMessageProducer*/) {
         this.appProperties = appProperties;
         this.weatherProvide = weatherProvider;
         this.customerService = customerService;
-        this.kafkaMessageProducer = kafkaMessageProducer;
+        //this.kafkaMessageProducer = kafkaMessageProducer;
     }
 
 
@@ -70,11 +69,10 @@ public class WeatherService implements IWeatherService {
         return x;
     }
 
-    @Override
-
+/*    @Override
     //TODO: class for Kafka send message, get, convert
     public void sendCall(String message) {
 
         kafkaMessageProducer.sendMessage(message);
-    }
+    }*/
 }

@@ -35,5 +35,5 @@ public interface IWeatherService {
      *
      * @param message the message
      */
-    public void sendCall(String message);
+    //public void sendCall(String message);
 }

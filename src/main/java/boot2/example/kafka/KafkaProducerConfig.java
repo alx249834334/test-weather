@@ -15,17 +15,20 @@ import java.util.Map;
 /**
  * The type Kafka producer config.
  */
+/*
 @Configuration
 public class KafkaProducerConfig {
 
     @Value(value = "${kafka.bootstrapAddress}")
     private String bootstrapAddress;
 
-    /**
+    */
+/**
      * Producer factory producer factory.
      *
      * @return the producer factory
-     */
+     *//*
+
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
@@ -37,13 +40,15 @@ public class KafkaProducerConfig {
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
-    /**
+    */
+/**
      * Kafka template kafka template.
      *
      * @return the kafka template
-     */
+     *//*
+
     @Bean
     public KafkaTemplate<String, String> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
-}
+}*/

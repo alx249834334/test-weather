@@ -13,26 +13,26 @@ import java.util.Map;
 /**
  * The type Kafka topic config.
  */
-@Configuration
+/*@Configuration
 public class KafkaTopicConfig {
 
     @Value(value = "${kafka.bootstrapAddress}")
     private String bootstrapAddress;
 
-    /**
+    *//**
      * Gets kafka bootstrap address.
      *
      * @return the kafka bootstrap address
-     */
+     *//*
     public String getKafkaBootstrapAddress() {
         return bootstrapAddress;
     }
 
-    /**
+    *//**
      * Kafka admin kafka admin.
      *
      * @return the kafka admin
-     */
+     *//*
     @Bean
     public KafkaAdmin kafkaAdmin() {
         Map<String, Object> configs = new HashMap<>();
@@ -40,13 +40,13 @@ public class KafkaTopicConfig {
         return new KafkaAdmin(configs);
     }
 
-    /**
+    *//**
      * Topic 1 new topic.
      *
      * @return the new topic
-     */
+     *//*
     @Bean
     public NewTopic topic1() {
         return new NewTopic("test_kafka", 1, (short) 1);
     }
-}
+}*/
